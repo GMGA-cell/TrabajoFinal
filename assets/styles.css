@@ -1,0 +1,473 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+} /*hace que todas las fuentes sean 10 px para usar Rem
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.8;
+  color: var(--texto);
+  background: #fff;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* cada <section> del main: aire arriba/abajo y contenido centrado */
+main > section {
+  padding: 90px var(--lateral);
+}
+
+
+/* ===================== TIPOGRAFÍA Y BOTONES ====================== */
+
+.titulo {
+  font-size: 4.2rem;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.parrafo{
+    font-size: 1.6rem;
+    color: rgb(128, 128, 128);
+    font-weight: 400; /* peso */
+    max-width: 80rem; /*ancho maximo */
+}
+
+.footer-negrita{
+    font-size: 1.5rem;
+    color: rgb(25, 25, 25);
+    font-weight: 700; /* peso */
+    max-width: 80rem; /*ancho maximo */
+}
+
+.cursiva{
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.8rem;
+}
+
+.negrita{
+  color: rgb(64, 64, 64);
+  /*text-transform: uppercase;*/
+}
+
+.titulo-Getin{
+  color: rgb(255, 251, 251);
+    font-size: 3.8rem;
+}
+
+/* botón base (START NOW, KNOW MORE, VIEW MORE, APPLY NOW...) */
+button {
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  padding: 1.6rem 4rem;
+  cursor: pointer;  
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+
+.main-button{
+  border: 0.2rem solid #28d1a2;
+  background-color: #28d1a2;
+  color: white;
+}
+
+
+.secondary-button{
+  border: 0.2rem solid white;
+  background-color: white;
+  color:#000000
+}
+
+.button-to-white:hover {
+    border: 0.2rem solid rgb(255, 255, 255);
+  background: white;
+  color: #000000;
+}
+
+.button-to-black:hover {
+    border: 0.2rem solid black;
+  background: rgb(0, 0, 0);
+  color: #ffffff;
+}
+
+.button-to-whiteBorder:hover {
+    border: 0.2rem solid black;
+  background: white;
+  color: #000000;
+}
+
+
+
+
+/* ======================== ÍCONOS SOCIALES ======================== */
+.social-row{
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1;
+  background-color: #28d1a2;
+  color: white;
+}
+
+.herramientas-icon{
+  color: #28d1a2;
+  font-size: 3.5rem;
+}
+
+.footer-icon{
+  color: rgb(89, 89, 89);
+  font-size: 1.6rem;
+}
+
+/* ========================= HEADER Y MENÚ ========================= */
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.4rem;
+  padding: 2.4rem 2rem;
+  color: white;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 1000;
+  letter-spacing: 0.4rem;
+  font-family: "Nunito Sans", sans-serif;
+  letter-spacing: 0px
+}
+
+header nav ul {
+  display: flex;
+  gap: 34px;
+}
+
+header nav a {
+  position: relative;
+  display: block;
+  padding: 0.6rem 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+/* rayita animada debajo del link (hover) */
+header nav a:hover {
+  color: rgb(34, 147, 215);
+}
+
+.actual-page{
+  color: rgb(34, 147, 215);
+}
+
+.header-flex{
+  display: flex;
+  position: static;
+
+}
+
+.header-black{
+  color: black;
+}
+
+/* ============================== HOME ============================= */
+/* "main:has(> section:first-child > img + h1)" = el main de la home */
+
+.hero{
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+
+.hero-content{
+  position: absolute;
+  z-index: 2;
+  top: 40%;
+  left: 20%;
+}
+
+.hero-content h2{
+  font-size: 6rem;
+  color: #fff;
+  max-width: 85rem;
+  font-weight: 200; /* peso */
+  max-width: 75.6rem;
+}
+
+.hero-content p{
+  font-size: 1.8rem;
+  max-width: 65rem;
+  color: #fff;
+}
+
+.hero-img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.seccion{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 12rem 5rem;
+  gap: 3rem;
+}
+
+.fondo-gris{
+  background-color: #f4f4f4;
+}
+
+.fila{
+  display: flex;
+}
+
+.columnas{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.columna-derecha{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+
+.columna-izquierda{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.fila-what-we-do{
+  max-width: 38.4rem;
+}
+
+.contenido-what-we-do{
+  gap: 5rem;
+}
+
+.columna-what-we-do{
+  gap: 2rem;
+}
+
+
+.portafolio{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 2rem;
+}
+
+.portafolio-item {
+    max-width: 50rem;
+    max-height: 30.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.portafolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portafolio-item a {
+    position: absolute;
+    inset: 1rem;
+    background-color: #28d1a100;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.portafolio-item a:hover {
+    background-color: rgba(40, 209, 161, 0.851);
+    opacity: 1;
+}
+
+.seccion-linea{
+  border: solid #000000;
+  border-bottom: 3px;
+}
+
+.testimonios{
+  gap: 3rem;
+}
+
+.testimonio{
+  background-color: #ffffff;
+  gap: 3rem;
+  padding: 4.4rem;
+  max-width: 37.3rem;
+}
+
+.testimonio p {
+  color: rgb(128, 128, 128);
+  text-align: center;
+}
+
+.get-in{
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  overflow: hidden;
+}
+
+.get-content{
+  position: absolute;
+  display: flex;
+  z-index: 2;
+  top: 40%;
+  left: 20%;
+  gap: 3rem;
+}
+
+/* ============================= PORTAFOLIO ============================ */
+
+.filtros{
+  display: flex;
+  gap: 2rem;
+}
+
+.filtros button{
+  padding: 0 2rem 0 0;
+  background: none;
+  border: none;
+  border-right: 2px rgba(40, 209, 161, 0.851);
+    font-size: 1.1rem;
+}
+
+.filtros button:active{
+  color: rgba(40, 209, 161, 0.851);
+}
+
+/* ============================= FOOTER ============================ */
+.footer{
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.footer-content{
+  position: absolute;
+  display: flex;
+  z-index: 2;
+  top: 30%;
+  left: 10%;
+  gap: 3rem;
+}
+
+.icon-footer{
+  display: flex;
+}
+
+.columna-footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  max-width: 50rem; 
+}
